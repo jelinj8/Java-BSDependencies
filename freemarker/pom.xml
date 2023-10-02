@@ -9,15 +9,20 @@
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>dependency-management-8-jaxb</artifactId>
+	<artifactId>dependency-management-8-freemarker</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>
-		<!--
-		https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 		<dependency>
-			<groupId>jakarta.annotation</groupId>
-			<artifactId>jakarta.annotation-api</artifactId>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/no.api.freemarker/freemarker-java8 -->
+		<dependency>
+			<groupId>no.api.freemarker</groupId>
+			<artifactId>freemarker-java8</artifactId>
 		</dependency>
 
 	</dependencies>
