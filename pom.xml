@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<dependency-management-8.version>1.0.0-SNAPSHOT</dependency-management-8.version>
 		<revision>1.0.0-SNAPSHOT</revision>
+		<bsdependencies.version>${revision}</bsdependencies.version>
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -27,6 +27,7 @@
 
 	<modules>
 		<module>client</module>
+		<module>freemarker</module>
 		<module>jaxb</module>
 		<module>log4j</module>
 		<module>service</module>
@@ -35,41 +36,40 @@
 
 	<dependencyManagement>
 		<dependencies>
-		
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-client</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-freemarker</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-jaxb</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-log4j</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-service</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-servicedef</artifactId>
-				<version>${project.version}</version>
+				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 		
@@ -246,14 +246,14 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-install-plugin</artifactId>
 				<version>2.4</version>
 				<configuration>
 					<pomFile>.flattened-pom.xml</pomFile>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 </project>
