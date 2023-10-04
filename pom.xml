@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
 		<revision>1.0.0-SNAPSHOT</revision>
@@ -30,6 +32,7 @@
 		<module>freemarker</module>
 		<module>jaxb</module>
 		<module>log4j</module>
+		<module>ooxml</module>
 		<module>service</module>
 		<module>servicedef</module>
 	</modules>
@@ -72,7 +75,7 @@
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
-		
+
 			<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 			<dependency>
 				<groupId>org.freemarker</groupId>
@@ -80,40 +83,46 @@
 				<version>2.3.30</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/no.api.freemarker/freemarker-java8 -->
+			<!--
+			https://mvnrepository.com/artifact/no.api.freemarker/freemarker-java8 -->
 			<dependency>
 				<groupId>no.api.freemarker</groupId>
 				<artifactId>freemarker-java8</artifactId>
 				<version>2.0.0</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+			<!--
+			https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-core</artifactId>
 				<version>2.20.0</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+			<!--
+			https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-api</artifactId>
 				<version>2.20.0</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-jul -->
+			<!--
+			https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-jul -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-jul</artifactId>
 				<version>2.20.0</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+			<!--
+			https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
 				<version>3.13.0</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+			<!--
+			https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
@@ -134,7 +143,8 @@
 				<version>1.16.0</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+			<!--
+			https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 			<dependency>
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
@@ -173,7 +183,8 @@
 				<version>20220924</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
+			<!--
+			https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
 			<dependency>
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
@@ -181,7 +192,8 @@
 				<!-- <version>4.0.0</version> -->
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
+			<!--
+			https://mvnrepository.com/artifact/jakarta.xml.ws/jakarta.xml.ws-api -->
 			<dependency>
 				<groupId>jakarta.xml.ws</groupId>
 				<artifactId>jakarta.xml.ws-api</artifactId>
@@ -189,7 +201,8 @@
 				<!-- <version>4.0.0</version> -->
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+			<!--
+			https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-runtime</artifactId>
@@ -197,27 +210,30 @@
 				<version>3.0.2</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.glassfish.metro/webservices-rt -->
+			<!--
+			https://mvnrepository.com/artifact/org.glassfish.metro/webservices-rt -->
 			<dependency>
 				<groupId>org.glassfish.metro</groupId>
 				<artifactId>webservices-rt</artifactId>
 				<version>3.0.3</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+			<!--
+			https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
 			<dependency>
 				<groupId>jakarta.servlet</groupId>
 				<artifactId>jakarta.servlet-api</artifactId>
 				<version>5.0.0</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
+			<!--
+			https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
 			<dependency>
 				<groupId>jakarta.annotation</groupId>
 				<artifactId>jakarta.annotation-api</artifactId>
 				<version>2.1.1</version>
 			</dependency>
-			
+
 			<!-- https://mvnrepository.com/artifact/junit/junit -->
 			<dependency>
 				<groupId>junit</groupId>
@@ -225,7 +241,20 @@
 				<version>4.13</version>
 				<scope>test</scope>
 			</dependency>
-			
+
+			<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>5.0.0</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>5.0.0</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<build>
