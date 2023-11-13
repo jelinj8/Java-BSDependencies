@@ -75,6 +75,12 @@
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-httpclient</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 			<dependency>
