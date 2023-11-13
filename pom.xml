@@ -34,6 +34,7 @@
 		<module>service</module>
 		<module>servicedef</module>
 		<module>ojdbc</module>
+		<module>httpclient</module>
 	</modules>
 
 	<dependencyManagement>
