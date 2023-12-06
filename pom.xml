@@ -29,6 +29,8 @@
 		<module>client</module>
 		<module>freemarker</module>
 		<module>jaxb</module>
+		<module>hibernate</module>
+		<module>mariadb</module>
 		<module>log4j</module>
 		<module>ooxml</module>
 		<module>service</module>
@@ -53,6 +55,12 @@
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-hibernate</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-jaxb</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
@@ -60,6 +68,12 @@
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-log4j</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-mariadb</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
@@ -295,6 +309,27 @@
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>2.0.9</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core-jakarta</artifactId>
+				<version>5.6.15.Final</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
+			<dependency>
+				<groupId>org.hibernate.common</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>5.1.2.Final</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+			<dependency>
+				<groupId>org.mariadb.jdbc</groupId>
+				<artifactId>mariadb-java-client</artifactId>
+				<version>2.6.0</version>
 			</dependency>
 
 		</dependencies>
