@@ -32,6 +32,7 @@
 		<module>hibernate</module>
 		<module>mariadb</module>
 		<module>log4j</module>
+		<module>mail</module>
 		<module>ooxml</module>
 		<module>service</module>
 		<module>servicedef</module>
