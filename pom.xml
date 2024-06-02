@@ -38,6 +38,7 @@
 		<module>servicedef</module>
 		<module>ojdbc</module>
 		<module>httpclient</module>
+		<module>flyingsaucer</module>
 	</modules>
 
 	<dependencyManagement>
@@ -93,6 +94,12 @@
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-httpclient</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-flyingsaucer</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
@@ -325,6 +332,27 @@
 				<groupId>org.mariadb.jdbc</groupId>
 				<artifactId>mariadb-java-client</artifactId>
 				<version>2.6.0</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-core -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-core</artifactId>
+				<version>9.4.1</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-pdf</artifactId>
+				<version>9.4.1</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-log4j -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-log4j</artifactId>
+				<version>9.4.1</version>
 			</dependency>
 
 		</dependencies>
