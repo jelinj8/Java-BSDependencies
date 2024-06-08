@@ -33,6 +33,7 @@
 		<module>jaxb</module>
 		<module>hibernate</module>
 		<module>mariadb</module>
+		<module>mysql</module>
 		<module>log4j</module>
 		<module>mail</module>
 		<module>ooxml</module>
@@ -78,6 +79,12 @@
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-mariadb</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-mysql</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
