@@ -42,6 +42,7 @@
 		<module>ojdbc</module>
 		<module>httpclient</module>
 		<module>flyingsaucer</module>
+		<module>slf4j</module>
 	</modules>
 
 	<dependencyManagement>
@@ -109,6 +110,12 @@
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
 				<artifactId>dependency-management-8-flyingsaucer</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-8-slf4j</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
