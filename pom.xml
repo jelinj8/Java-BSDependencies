@@ -41,7 +41,6 @@
 		<module>servicedef</module>
 		<module>ojdbc</module>
 		<module>httpclient</module>
-		<module>flyingsaucer</module>
 		<module>slf4j</module>
 	</modules>
 
@@ -381,30 +380,6 @@
 				<groupId>com.mysql</groupId>
 				<artifactId>mysql-connector-j</artifactId>
 				<version>8.4.0</version>
-			</dependency>
-
-			<!--
-			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-core -->
-			<dependency>
-				<groupId>org.xhtmlrenderer</groupId>
-				<artifactId>flying-saucer-core</artifactId>
-				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-			</dependency>
-
-			<!--
-			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
-			<dependency>
-				<groupId>org.xhtmlrenderer</groupId>
-				<artifactId>flying-saucer-pdf</artifactId>
-				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-			</dependency>
-
-			<!--
-			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-log4j -->
-			<dependency>
-				<groupId>org.xhtmlrenderer</groupId>
-				<artifactId>flying-saucer-log4j</artifactId>
-				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
