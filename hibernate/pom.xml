@@ -26,5 +26,12 @@
 			<groupId>org.hibernate.common</groupId>
 			<artifactId>hibernate-commons-annotations</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+		</dependency>
+
 	</dependencies>
 </project>
