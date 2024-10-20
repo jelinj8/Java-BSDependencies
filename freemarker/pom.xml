@@ -18,8 +18,9 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/no.api.freemarker/freemarker-java8 -->
+
+		<!--
+		https://mvnrepository.com/artifact/no.api.freemarker/freemarker-java8 -->
 		<dependency>
 			<groupId>no.api.freemarker</groupId>
 			<artifactId>freemarker-java8</artifactId>

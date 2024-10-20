@@ -13,16 +13,18 @@
 	<packaging>pom</packaging>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
+		<!--
+		https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
 		<dependency>
 			<groupId>jakarta.annotation</groupId>
 			<artifactId>jakarta.annotation-api</artifactId>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
+
+		<!--
+		https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api -->
 		<dependency>
-    		<groupId>jakarta.xml.bind</groupId>
-    		<artifactId>jakarta.xml.bind-api</artifactId>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
 		</dependency>
 
 		<dependency>
