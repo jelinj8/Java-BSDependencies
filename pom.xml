@@ -393,8 +393,7 @@
 
 			<!--
 			https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta --> <!-- last
-			version
-			for Java 1.8 -->
+			version for Java 1.8 -->
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core-jakarta</artifactId>
