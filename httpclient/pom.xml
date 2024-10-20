@@ -3,11 +3,11 @@
 
 	<parent>
 		<groupId>cz.bliksoft.java</groupId>
-		<artifactId>dependency-management-8</artifactId>
+		<artifactId>dependency-management</artifactId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>dependency-management-8-httpclient</artifactId>
+	<artifactId>dependency-management-httpclient</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>

@@ -3,11 +3,11 @@
 
 	<parent>
 		<groupId>cz.bliksoft.java</groupId>
-		<artifactId>dependency-management-8</artifactId>
+		<artifactId>dependency-management</artifactId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>dependency-management-8-ojdbc</artifactId>
+	<artifactId>dependency-management-ojdbc8</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>

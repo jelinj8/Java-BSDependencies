@@ -9,7 +9,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cz.bliksoft.java</groupId>
-	<artifactId>dependency-management-8</artifactId>
+	<artifactId>dependency-management</artifactId>
 	<!--<version>1.0.0-SNAPSHOT</version>-->
 	<version>${revision}</version>
 	<name>BSDependecies root POM</name>
@@ -48,73 +48,91 @@
 		<dependencies>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-client</artifactId>
+				<artifactId>dependency-management-client</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-freemarker</artifactId>
+				<artifactId>dependency-management-flyingsaucer</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-hibernate</artifactId>
+				<artifactId>dependency-management-freemarker</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-jaxb</artifactId>
+				<artifactId>dependency-management-hibernate</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-log4j</artifactId>
+				<artifactId>dependency-management-httpclient</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-mariadb</artifactId>
+				<artifactId>dependency-management-jaxb</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-mysql</artifactId>
+				<artifactId>dependency-management-log4j</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-service</artifactId>
+				<artifactId>dependency-management-mail</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-servicedef</artifactId>
+				<artifactId>dependency-management-mariadb</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-httpclient</artifactId>
+				<artifactId>dependency-management-mysql</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-flyingsaucer</artifactId>
+				<artifactId>dependency-management-ojdbc8</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>cz.bliksoft.java</groupId>
-				<artifactId>dependency-management-8-slf4j</artifactId>
+				<artifactId>dependency-management-ooxml</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-service</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-servicedef</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-slf4j</artifactId>
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
@@ -246,7 +264,7 @@
 			<dependency>
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
-				<version>3.0.1</version>
+				<version>3.0.1</version> <!-- latest for Java 8 -->
 				<!-- <version>4.0.0</version> -->
 			</dependency>
 
@@ -255,7 +273,7 @@
 			<dependency>
 				<groupId>jakarta.xml.ws</groupId>
 				<artifactId>jakarta.xml.ws-api</artifactId>
-				<version>3.0.1</version>
+				<version>3.0.1</version> <!-- latest for Java 8 -->
 				<!-- <version>4.0.0</version> -->
 			</dependency>
 
@@ -264,8 +282,8 @@
 			<dependency>
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-runtime</artifactId>
+				<version>3.0.2</version> <!-- latest for Java 8 -->
 				<!-- <version>4.0.3</version> -->
-				<version>3.0.2</version>
 			</dependency>
 
 			<!--
@@ -319,7 +337,7 @@
 			<dependency>
 				<groupId>com.oracle.database.jdbc</groupId>
 				<artifactId>ojdbc8</artifactId>
-				<version>21.9.0.0</version>
+				<version>21.9.0.0</version>	<!-- <version>4.0.3</version> -->
 				<!-- <version>23.3.0.23.09</version> -->
 			</dependency>
 
@@ -387,6 +405,33 @@
 				<groupId>org.apache.pdfbox</groupId>
 				<artifactId>pdfbox</artifactId>
 				<version>3.0.3</version>
+			</dependency>
+
+			<!--
+			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-core -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-core</artifactId>
+				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>9.9.3</version> -->
+			</dependency>
+
+			<!--
+			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-pdf</artifactId>
+				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>9.9.3</version> -->
+			</dependency>
+
+			<!--
+			https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-log4j -->
+			<dependency>
+				<groupId>org.xhtmlrenderer</groupId>
+				<artifactId>flying-saucer-log4j</artifactId>
+				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>9.9.3</version> -->
 			</dependency>
 
 		</dependencies>

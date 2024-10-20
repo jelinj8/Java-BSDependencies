@@ -5,11 +5,11 @@
 
 	<parent>
 		<groupId>cz.bliksoft.java</groupId>
-		<artifactId>dependency-management-8</artifactId>
+		<artifactId>dependency-management</artifactId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>dependency-management-8-slf4j</artifactId>
+	<artifactId>dependency-management-slf4j</artifactId>
 	<packaging>pom</packaging>
 
 	<dependencies>
