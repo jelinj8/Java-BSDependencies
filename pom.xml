@@ -149,7 +149,7 @@
 			<dependency>
 				<groupId>no.api.freemarker</groupId>
 				<artifactId>freemarker-java8</artifactId>
-				<version>2.1.0</version>
+				<version>3.0.0</version>
 			</dependency>
 
 			<!--
@@ -157,21 +157,21 @@
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-core</artifactId>
-				<version>2.23.1</version>
+				<version>2.24.1</version>
 			</dependency>
 			<!--
 			https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-api</artifactId>
-				<version>2.23.1</version>
+				<version>2.24.1</version>
 			</dependency>
 			<!--
 			https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-jul -->
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-jul</artifactId>
-				<version>2.23.1</version>
+				<version>2.24.1</version>
 			</dependency>
 
 			<!--
@@ -179,7 +179,7 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.14.0</version>
+				<version>3.17.0</version>
 			</dependency>
 
 			<!--
@@ -194,14 +194,14 @@
 			<dependency>
 				<groupId>commons-io</groupId>
 				<artifactId>commons-io</artifactId>
-				<version>2.15.1</version>
+				<version>2.17.0</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.16.1</version>
+				<version>1.17.1</version>
 			</dependency>
 
 			<!--
@@ -209,14 +209,14 @@
 			<dependency>
 				<groupId>commons-logging</groupId>
 				<artifactId>commons-logging</artifactId>
-				<version>1.3.3</version>
+				<version>1.3.4</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-cli/commons-cli -->
 			<dependency>
 				<groupId>commons-cli</groupId>
 				<artifactId>commons-cli</artifactId>
-				<version>1.8.0</version>
+				<version>1.9.0</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.sun.mail/jakarta.mail -->
@@ -236,13 +236,13 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents.client5</groupId>
 				<artifactId>httpclient5</artifactId>
-				<version>5.3.1</version>
+				<version>5.4</version>
 			</dependency>
 
 			<dependency>
 				<groupId>org.json</groupId>
 				<artifactId>json</artifactId>
-				<version>20220924</version>
+				<version>20240303</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/xalan/xalan -->
@@ -265,7 +265,7 @@
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
 				<version>3.0.1</version> <!-- latest for Java 8 -->
-				<!-- <version>4.0.0</version> -->
+				<!-- <version>4.0.2</version> -->
 			</dependency>
 
 			<!--
@@ -274,7 +274,7 @@
 				<groupId>jakarta.xml.ws</groupId>
 				<artifactId>jakarta.xml.ws-api</artifactId>
 				<version>3.0.1</version> <!-- latest for Java 8 -->
-				<!-- <version>4.0.0</version> -->
+				<!-- <version>4.0.2</version> -->
 			</dependency>
 
 			<!--
@@ -283,7 +283,7 @@
 				<groupId>org.glassfish.jaxb</groupId>
 				<artifactId>jaxb-runtime</artifactId>
 				<version>3.0.2</version> <!-- latest for Java 8 -->
-				<!-- <version>4.0.3</version> -->
+				<!-- <version>4.0.5</version> -->
 			</dependency>
 
 			<!--
@@ -291,7 +291,8 @@
 			<dependency>
 				<groupId>org.glassfish.metro</groupId>
 				<artifactId>webservices-rt</artifactId>
-				<version>3.0.3</version>
+				<version>3.0.3</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>4.0.4</version> -->
 			</dependency>
 
 			<!--
@@ -300,6 +301,7 @@
 				<groupId>jakarta.servlet</groupId>
 				<artifactId>jakarta.servlet-api</artifactId>
 				<version>5.0.0</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>6.1.0</version> -->
 			</dependency>
 
 			<!--
@@ -307,28 +309,38 @@
 			<dependency>
 				<groupId>jakarta.annotation</groupId>
 				<artifactId>jakarta.annotation-api</artifactId>
-				<version>2.1.1</version>
+				<version>2.1.1</version> <!-- last major version for Java 1.8 -->
+				<!-- <version>3.0.0</version> -->
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/junit/junit -->
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>4.13</version>
-				<scope>test</scope>
+				<version>4.13.2</version>
+				<scope>test</scope> <!-- last major version for Java 1.8 -->
 			</dependency>
+
+			<!--
+			https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+			<!-- <dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>5.11.2</version>
+				<scope>test</scope>
+			</dependency> -->
 
 			<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi</artifactId>
-				<version>5.0.0</version>
+				<version>5.3.0</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi-ooxml</artifactId>
-				<version>5.0.0</version>
+				<version>5.3.0</version>
 			</dependency>
 
 			<!--
@@ -345,28 +357,28 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-nop</artifactId>
-				<version>2.0.13</version>
+				<version>2.0.16</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-reload4j</artifactId>
-				<version>2.0.13</version>
+				<version>2.0.16</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>2.0.13</version>
+				<version>2.0.16</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-simple</artifactId>
-				<version>2.0.13</version>
+				<version>2.0.16</version> <!-- last version for Java 1.8 -->
 			</dependency>
 
 			<!--
@@ -374,15 +386,24 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core-jakarta</artifactId>
-				<version>5.6.15.Final</version>
+				<version>5.6.15.Final</version> <!-- last version for Java 1.8 -->
 			</dependency>
+
+			<!--
+			https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+			<!-- <dependency>
+				<groupId>org.hibernate.orm</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>6.6.1.Final</version>
+			</dependency> -->
 
 			<!--
 			https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
 			<dependency>
 				<groupId>org.hibernate.common</groupId>
 				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>5.1.2.Final</version>
+				<version>5.1.2.Final</version> <!-- last version for Java 1.8 -->
+				<!-- <version>7.0.2.Final</version> -->
 			</dependency>
 
 			<!--
@@ -390,14 +411,15 @@
 			<dependency>
 				<groupId>org.mariadb.jdbc</groupId>
 				<artifactId>mariadb-java-client</artifactId>
-				<version>3.4.0</version>
+				<version>3.4.1</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 			<dependency>
 				<groupId>com.mysql</groupId>
 				<artifactId>mysql-connector-j</artifactId>
-				<version>8.4.0</version>
+				<version>8.4.0</version> <!-- last version for Java 1.8 -->
+				<!-- <version>9.1.0</version> -->
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
@@ -413,7 +435,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-core</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.9.3</version> -->
+				<!-- <version>9.9.5</version> -->
 			</dependency>
 
 			<!--
@@ -422,7 +444,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-pdf</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.9.3</version> -->
+				<!-- <version>9.9.5</version> -->
 			</dependency>
 
 			<!--
@@ -431,7 +453,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-log4j</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.9.3</version> -->
+				<!-- <version>9.9.5</version> -->
 			</dependency>
 
 		</dependencies>
