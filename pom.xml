@@ -30,6 +30,7 @@
 	<modules>
 		<module>client</module>
 		<module>freemarker</module>
+		<module>flyingsaucer</module>
 		<module>jaxb</module>
 		<module>hibernate</module>
 		<module>mariadb</module>
