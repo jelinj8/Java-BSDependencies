@@ -410,7 +410,6 @@
 				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-c3p0</artifactId>
 				<version>6.6.1.Final</version>
-				<type>pom</type>
 			</dependency> -->
 
 			<!--
