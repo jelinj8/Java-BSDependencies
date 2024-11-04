@@ -33,5 +33,10 @@
 			<artifactId>hibernate-c3p0</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/net.oneandone.reflections8/reflections8 -->
+		<dependency>
+			<groupId>net.oneandone.reflections8</groupId>
+			<artifactId>reflections8</artifactId>
+		</dependency>
 	</dependencies>
 </project>
