@@ -468,7 +468,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-core</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.11.12</version> -->
+				<!-- <version>9.11.2</version> -->
 			</dependency>
 
 			<!--
@@ -477,7 +477,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-pdf</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.11.12</version> -->
+				<!-- <version>9.11.2</version> -->
 			</dependency>
 
 			<!--
@@ -486,7 +486,7 @@
 				<groupId>org.xhtmlrenderer</groupId>
 				<artifactId>flying-saucer-log4j</artifactId>
 				<version>9.4.1</version> <!-- last major version for Java 1.8 -->
-				<!-- <version>9.11.12</version> -->
+				<!-- <version>9.11.2</version> -->
 			</dependency>
 
 			<!--
