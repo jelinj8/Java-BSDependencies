@@ -7,18 +7,28 @@
 		<groupId>cz.bliksoft.java</groupId>
 		<artifactId>dependency-management</artifactId>
 		<version>${revision}</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>dependency-management-hibernate</artifactId>
 	<packaging>pom</packaging>
 
-	<dependencies>
-		<!--
-		https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core-jakarta</artifactId>
-		</dependency>
+	<profiles>
+		<profile>
+			<id>Java-1.8</id>
+			<dependencies>
+				<!--
+				https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-core-jakarta</artifactId>
+				</dependency>
+		
+				<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-c3p0</artifactId>
+				</dependency>
 
 		<!--
 		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
@@ -26,12 +36,40 @@
 			<groupId>org.hibernate.common</groupId>
 			<artifactId>hibernate-commons-annotations</artifactId>
 		</dependency>
+
+			</dependencies>
+		</profile>
 		
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<profile>
+			<id>Java-17</id>
+			<dependencies>
+				<!--
+				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+				<dependency>
+					<groupId>org.hibernate.orm</groupId>
+					<artifactId>hibernate-core</artifactId>
+				</dependency>
+	
+				<!--
+				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0 -->
+				<dependency>
+					<groupId>org.hibernate.orm</groupId>
+					<artifactId>hibernate-c3p0</artifactId>
+				</dependency>
+
+
+			</dependencies>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
 		</dependency>
 
 	</dependencies>
+
 </project>
