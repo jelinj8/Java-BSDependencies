@@ -21,19 +21,6 @@
 		</dependency>
 
 		<!--
-		https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta J8 -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core-jakarta</artifactId>
-		</dependency>
-	
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 J8 -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-		</dependency>
-
-		<!--
 		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core 11+ -->
 		<dependency>
 			<groupId>org.hibernate.orm</groupId>
