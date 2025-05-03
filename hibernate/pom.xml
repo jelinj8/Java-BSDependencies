@@ -33,20 +33,6 @@
 			<artifactId>hibernate-c3p0</artifactId>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core 11+ -->
-		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-core</artifactId>
-		</dependency>
-	
-		<!--
-		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0 11+ -->
-		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-		</dependency>
-
 	</dependencies>
 
 </project>
