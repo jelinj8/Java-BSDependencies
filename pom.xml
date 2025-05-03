@@ -3,7 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<revision>1.0.0-SNAPSHOT</revision>
+		<java.target.version>8</java.target.version>
+		<revision>1.${java.target.version}.0-SNAPSHOT</revision>
 		<bsdependencies.version>${revision}</bsdependencies.version>
 		
         <jakarta.xml.bind-jakarta.xml.bind-api-version>default</jakarta.xml.bind-jakarta.xml.bind-api-version>
@@ -33,7 +34,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cz.bliksoft.java</groupId>
 	<artifactId>dependency-management</artifactId>
-	<!--<version>1.0.0-SNAPSHOT</version>-->
 	<version>${revision}</version>
 	<name>BSDependecies root POM</name>
 	<packaging>pom</packaging>
@@ -71,10 +71,9 @@
     <profiles>
       <profile>
       	<id>Java-1.8</id>
-        <activation>
-          <jdk>1.8</jdk>
-        </activation>
         <properties>
+          <java.target.version>8</java.target.version>
+          
           <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
           <jakarta.xml.bind-jakarta.xml.ws-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.ws-api-version>
           <org.glassfish.jaxb-jaxb-runtime-version>3.0.2</org.glassfish.jaxb-jaxb-runtime-version>
@@ -100,11 +99,10 @@
         </properties>
       </profile>
       <profile>
-      	<id>Java-17</id>
-        <activation>
-          <jdk>[17,)</jdk>
-        </activation>
+      	<id>Java-11</id>
         <properties>
+          <java.target.version>11</java.target.version>
+
           <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
           <jakarta.xml.bind-jakarta.xml.ws-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.ws-api-version>
           <org.glassfish.jaxb-jaxb-runtime-version>3.0.2</org.glassfish.jaxb-jaxb-runtime-version>
@@ -119,11 +117,21 @@
           
           <org.hibernate-hibernate-core-jakarta-version>--</org.hibernate-hibernate-core-jakarta-version> <!-- 8 only -->
           <org.hibernate-hibernate-c3p0-version>--</org.hibernate-hibernate-c3p0-version> <!-- 8 only -->
-          <org.hibernate.orm-hibernate-core-version>6.6.4.Final</org.hibernate.orm-hibernate-core-version> <!-- 17+ -->
-          <org.hibernate.orm-hibernate-c3p0-version>6.6.4.Final</org.hibernate.orm-hibernate-c3p0-version> <!-- 17+ -->
+          <org.hibernate.orm-hibernate-core-version>6.6.13.Final</org.hibernate.orm-hibernate-core-version> <!-- 17+ -->
+          <org.hibernate.orm-hibernate-c3p0-version>6.6.13.Final</org.hibernate.orm-hibernate-c3p0-version> <!-- 17+ -->
           
           <org.hibernate.common-hibernate-commons-annotations-version>7.0.3.Final</org.hibernate.common-hibernate-commons-annotations-version>
           <com.mysql-mysql-connector-j-version>9.1.0</com.mysql-mysql-connector-j-version>
+          <org.xhtmlrenderer-flying-saucer-core-version>9.5.0</org.xhtmlrenderer-flying-saucer-core-version>
+          <org.xhtmlrenderer-flying-saucer-pdf-version>9.5.0</org.xhtmlrenderer-flying-saucer-pdf-version>
+          <org.xhtmlrenderer-flying-saucer-log4j-version>9.5.0</org.xhtmlrenderer-flying-saucer-log4j-version>
+        </properties>
+      </profile>
+      <profile>
+      	<id>Java-17</id>
+        <properties>
+          <java.target.version>17</java.target.version>
+
           <org.xhtmlrenderer-flying-saucer-core-version>9.12.0</org.xhtmlrenderer-flying-saucer-core-version>
           <org.xhtmlrenderer-flying-saucer-pdf-version>9.12.0</org.xhtmlrenderer-flying-saucer-pdf-version>
           <org.xhtmlrenderer-flying-saucer-log4j-version>9.12.0</org.xhtmlrenderer-flying-saucer-log4j-version>

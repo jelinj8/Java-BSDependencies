@@ -7,7 +7,6 @@
 		<groupId>cz.bliksoft.java</groupId>
 		<artifactId>dependency-management</artifactId>
 		<version>${revision}</version>
-		<relativePath>../pom.xml</relativePath>
 	</parent>
 
 	<artifactId>dependency-management-hibernate</artifactId>
@@ -30,18 +29,18 @@
 					<artifactId>hibernate-c3p0</artifactId>
 				</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
-		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-		</dependency>
+	       		<!--
+	       		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
+	       		<dependency>
+	       			<groupId>org.hibernate.common</groupId>
+	       			<artifactId>hibernate-commons-annotations</artifactId>
+	       		</dependency>
 
 			</dependencies>
 		</profile>
 		
 		<profile>
-			<id>Java-17</id>
+			<id>Java-11</id>
 			<dependencies>
 				<!--
 				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
