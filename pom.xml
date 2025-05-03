@@ -3,11 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<revision>1.${java.target.version}.1-SNAPSHOT</revision>
-		<bsdependencies.version>${revision}</bsdependencies.version>
+		<java.target.version>XX</java.target.version>
+		<revision>1.XX.1-SNAPSHOT</revision>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
-		<java.target.version>XX</java.target.version>
         <jakarta.xml.bind-jakarta.xml.bind-api-version>XX</jakarta.xml.bind-jakarta.xml.bind-api-version>
         <jakarta.xml.bind-jakarta.xml.ws-api-version>XX</jakarta.xml.bind-jakarta.xml.ws-api-version>
         <org.glassfish.jaxb-jaxb-runtime-version>XX</org.glassfish.jaxb-jaxb-runtime-version>

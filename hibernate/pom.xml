@@ -12,53 +12,39 @@
 	<artifactId>dependency-management-hibernate</artifactId>
 	<packaging>pom</packaging>
 
-	<profiles>
-		<profile>
-			<id>Java-8</id>
-			<dependencies>
-				<!--
-				https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
-				<dependency>
-					<groupId>org.hibernate</groupId>
-					<artifactId>hibernate-core-jakarta</artifactId>
-				</dependency>
-		
-				<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
-				<dependency>
-					<groupId>org.hibernate</groupId>
-					<artifactId>hibernate-c3p0</artifactId>
-				</dependency>
-
-			</dependencies>
-		</profile>
-		
-		<profile>
-			<id>Java-11+</id>
-			<dependencies>
-				<!--
-				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
-				<dependency>
-					<groupId>org.hibernate.orm</groupId>
-					<artifactId>hibernate-core</artifactId>
-				</dependency>
-	
-				<!--
-				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0 -->
-				<dependency>
-					<groupId>org.hibernate.orm</groupId>
-					<artifactId>hibernate-c3p0</artifactId>
-				</dependency>
-
-			</dependencies>
-		</profile>
-	</profiles>
-
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
 		<dependency>
 			<groupId>org.hibernate.common</groupId>
 			<artifactId>hibernate-commons-annotations</artifactId>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta J8 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core-jakarta</artifactId>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 J8 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core 11+ -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+	
+		<!--
+		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0 11+ -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
 		</dependency>
 
 	</dependencies>

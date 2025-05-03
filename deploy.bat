@@ -1,1 +1,0 @@
-mvn -PJava-8 deploy
