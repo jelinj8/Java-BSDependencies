@@ -3,32 +3,35 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<java.target.version>8</java.target.version>
 		<revision>1.${java.target.version}.0-SNAPSHOT</revision>
 		<bsdependencies.version>${revision}</bsdependencies.version>
+
+		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
+		<java.target.version>XX</java.target.version>
+        <jakarta.xml.bind-jakarta.xml.bind-api-version>XX</jakarta.xml.bind-jakarta.xml.bind-api-version>
+        <jakarta.xml.bind-jakarta.xml.ws-api-version>XX</jakarta.xml.bind-jakarta.xml.ws-api-version>
+        <org.glassfish.jaxb-jaxb-runtime-version>XX</org.glassfish.jaxb-jaxb-runtime-version>
+        <org.glassfish.metro-webservices-rt-version>XX</org.glassfish.metro-webservices-rt-version>
+        <jakarta.servlet-jakarta.servlet-api-version>XX</jakarta.servlet-jakarta.servlet-api-version>
+        <jakarta.annotation-jakarta.annotation-api-version>XX</jakarta.annotation-jakarta.annotation-api-version>
+        
+        <junit-junit-version8>XX</junit-junit-version8>
+        <org.junit.jupiter-junit-jupiter-api-version11>XX</org.junit.jupiter-junit-jupiter-api-version11>
+        
+        <com.oracle.database.jdbc-ojdbc8-version>XX</com.oracle.database.jdbc-ojdbc8-version>
+        
+        <org.hibernate-hibernate-core-jakarta-version8>XX</org.hibernate-hibernate-core-jakarta-version8>
+        <org.hibernate-hibernate-c3p0-version8>XX</org.hibernate-hibernate-c3p0-version8>
+        <org.hibernate.orm-hibernate-core-version11>XX</org.hibernate.orm-hibernate-core-version11>
+        <org.hibernate.orm-hibernate-c3p0-version11>XX</org.hibernate.orm-hibernate-c3p0-version11>
+        
+        <org.hibernate.common-hibernate-commons-annotations-version>XX</org.hibernate.common-hibernate-commons-annotations-version>
+        <com.mysql-mysql-connector-j-version>XX</com.mysql-mysql-connector-j-version>
+        <org.xhtmlrenderer-flying-saucer-core-version>XX</org.xhtmlrenderer-flying-saucer-core-version>
+        <org.xhtmlrenderer-flying-saucer-pdf-version>XX</org.xhtmlrenderer-flying-saucer-pdf-version>
+        <org.xhtmlrenderer-flying-saucer-log4j-version>XX</org.xhtmlrenderer-flying-saucer-log4j-version>
+		<!-- do not reorder/reformat -->
 		
-        <jakarta.xml.bind-jakarta.xml.bind-api-version>default</jakarta.xml.bind-jakarta.xml.bind-api-version>
-        <jakarta.xml.bind-jakarta.xml.ws-api-version>default</jakarta.xml.bind-jakarta.xml.ws-api-version>
-        <org.glassfish.jaxb-jaxb-runtime-version>default</org.glassfish.jaxb-jaxb-runtime-version>
-        <org.glassfish.metro-webservices-rt-version>default</org.glassfish.metro-webservices-rt-version>
-        <jakarta.servlet-jakarta.servlet-api-version>default</jakarta.servlet-jakarta.servlet-api-version>
-        <jakarta.annotation-jakarta.annotation-api-version>default</jakarta.annotation-jakarta.annotation-api-version>
-        
-        <junit-junit-version>default</junit-junit-version> <!-- 8 only -->
-        <org.junit.jupiter-junit-jupiter-api-version>default</org.junit.jupiter-junit-jupiter-api-version> <!-- 17+ -->
-        
-        <com.oracle.database.jdbc-ojdbc8-version>default</com.oracle.database.jdbc-ojdbc8-version>
-        
-        <org.hibernate-hibernate-core-jakarta-version>default</org.hibernate-hibernate-core-jakarta-version> <!-- 8 only -->
-        <org.hibernate-hibernate-c3p0-version>default</org.hibernate-hibernate-c3p0-version> <!-- 8 only -->
-        <org.hibernate.orm-hibernate-core-version>default</org.hibernate.orm-hibernate-core-version> <!-- 17+ -->
-        <org.hibernate.orm-hibernate-c3p0-version>default</org.hibernate.orm-hibernate-c3p0-version> <!-- 17+ -->
-        
-        <org.hibernate.common-hibernate-commons-annotations-version>default</org.hibernate.common-hibernate-commons-annotations-version>
-        <com.mysql-mysql-connector-j-version>default</com.mysql-mysql-connector-j-version>
-        <org.xhtmlrenderer-flying-saucer-core-version>default</org.xhtmlrenderer-flying-saucer-core-version>
-        <org.xhtmlrenderer-flying-saucer-pdf-version>default</org.xhtmlrenderer-flying-saucer-pdf-version>
-        <org.xhtmlrenderer-flying-saucer-log4j-version>default</org.xhtmlrenderer-flying-saucer-log4j-version>
 	</properties>
 
 	<modelVersion>4.0.0</modelVersion>
@@ -67,77 +70,6 @@
 		<module>httpclient</module>
 		<module>slf4j</module>
 	</modules>
-
-    <profiles>
-      <profile>
-      	<id>Java-1.8</id>
-        <properties>
-          <java.target.version>8</java.target.version>
-          
-          <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
-          <jakarta.xml.bind-jakarta.xml.ws-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.ws-api-version>
-          <org.glassfish.jaxb-jaxb-runtime-version>3.0.2</org.glassfish.jaxb-jaxb-runtime-version>
-          <org.glassfish.metro-webservices-rt-version>3.0.3</org.glassfish.metro-webservices-rt-version>
-          <jakarta.servlet-jakarta.servlet-api-version>5.0.0</jakarta.servlet-jakarta.servlet-api-version>
-          <jakarta.annotation-jakarta.annotation-api-version>2.1.1</jakarta.annotation-jakarta.annotation-api-version>
-          
-          <junit-junit-version>4.13.2</junit-junit-version> <!-- 8 only -->
-          <org.junit.jupiter-junit-jupiter-api-version>--</org.junit.jupiter-junit-jupiter-api-version> <!-- 17+ -->
-          
-          <com.oracle.database.jdbc-ojdbc8-version>21.9.0.0</com.oracle.database.jdbc-ojdbc8-version>
-          
-          <org.hibernate-hibernate-core-jakarta-version>5.6.15.Final</org.hibernate-hibernate-core-jakarta-version> <!-- 8 only -->
-          <org.hibernate-hibernate-c3p0-version>5.6.15.Final</org.hibernate-hibernate-c3p0-version> <!-- 8 only -->
-          <org.hibernate.orm-hibernate-core-version>--</org.hibernate.orm-hibernate-core-version> <!-- 17+ -->
-          <org.hibernate.orm-hibernate-c3p0-version>--</org.hibernate.orm-hibernate-c3p0-version> <!-- 17+ -->
-          
-          <org.hibernate.common-hibernate-commons-annotations-version>5.1.2.Final</org.hibernate.common-hibernate-commons-annotations-version>
-          <com.mysql-mysql-connector-j-version>8.4.0</com.mysql-mysql-connector-j-version>
-          <org.xhtmlrenderer-flying-saucer-core-version>9.4.1</org.xhtmlrenderer-flying-saucer-core-version>
-          <org.xhtmlrenderer-flying-saucer-pdf-version>9.4.1</org.xhtmlrenderer-flying-saucer-pdf-version>
-          <org.xhtmlrenderer-flying-saucer-log4j-version>9.4.1</org.xhtmlrenderer-flying-saucer-log4j-version>
-        </properties>
-      </profile>
-      <profile>
-      	<id>Java-11</id>
-        <properties>
-          <java.target.version>11</java.target.version>
-
-          <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
-          <jakarta.xml.bind-jakarta.xml.ws-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.ws-api-version>
-          <org.glassfish.jaxb-jaxb-runtime-version>3.0.2</org.glassfish.jaxb-jaxb-runtime-version>
-          <org.glassfish.metro-webservices-rt-version>4.0.4</org.glassfish.metro-webservices-rt-version>
-          <jakarta.servlet-jakarta.servlet-api-version>6.1.0</jakarta.servlet-jakarta.servlet-api-version>
-          <jakarta.annotation-jakarta.annotation-api-version>3.0.0</jakarta.annotation-jakarta.annotation-api-version>
-          
-          <junit-junit-version>--</junit-junit-version> <!-- 8 only -->
-          <org.junit.jupiter-junit-jupiter-api-version>5.12.2</org.junit.jupiter-junit-jupiter-api-version> <!-- 17+ -->
-          
-          <com.oracle.database.jdbc-ojdbc8-version>23.3.0.23.09</com.oracle.database.jdbc-ojdbc8-version>
-          
-          <org.hibernate-hibernate-core-jakarta-version>--</org.hibernate-hibernate-core-jakarta-version> <!-- 8 only -->
-          <org.hibernate-hibernate-c3p0-version>--</org.hibernate-hibernate-c3p0-version> <!-- 8 only -->
-          <org.hibernate.orm-hibernate-core-version>6.6.13.Final</org.hibernate.orm-hibernate-core-version> <!-- 17+ -->
-          <org.hibernate.orm-hibernate-c3p0-version>6.6.13.Final</org.hibernate.orm-hibernate-c3p0-version> <!-- 17+ -->
-          
-          <org.hibernate.common-hibernate-commons-annotations-version>7.0.3.Final</org.hibernate.common-hibernate-commons-annotations-version>
-          <com.mysql-mysql-connector-j-version>9.1.0</com.mysql-mysql-connector-j-version>
-          <org.xhtmlrenderer-flying-saucer-core-version>9.5.0</org.xhtmlrenderer-flying-saucer-core-version>
-          <org.xhtmlrenderer-flying-saucer-pdf-version>9.5.0</org.xhtmlrenderer-flying-saucer-pdf-version>
-          <org.xhtmlrenderer-flying-saucer-log4j-version>9.5.0</org.xhtmlrenderer-flying-saucer-log4j-version>
-        </properties>
-      </profile>
-      <profile>
-      	<id>Java-17</id>
-        <properties>
-          <java.target.version>17</java.target.version>
-
-          <org.xhtmlrenderer-flying-saucer-core-version>9.12.0</org.xhtmlrenderer-flying-saucer-core-version>
-          <org.xhtmlrenderer-flying-saucer-pdf-version>9.12.0</org.xhtmlrenderer-flying-saucer-pdf-version>
-          <org.xhtmlrenderer-flying-saucer-log4j-version>9.12.0</org.xhtmlrenderer-flying-saucer-log4j-version>
-        </properties>
-      </profile>
-    </profiles>
 
 	<dependencyManagement>
 		<dependencies>
@@ -414,16 +346,16 @@
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>${junit-junit-version}</version>
+				<version>${junit-junit-version8}</version>
 				<scope>test</scope>
 			</dependency>
 
-			<!-- 17+
+			<!-- 11+
 			https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
-				<version>${org.junit.jupiter-junit-jupiter-api-version}</version>
+				<version>${org.junit.jupiter-junit-jupiter-api-version11}</version>
 				<scope>test</scope>
 			</dependency>
 
@@ -490,7 +422,7 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core-jakarta</artifactId>
-				<version>${org.hibernate-hibernate-core-jakarta-version}</version>
+				<version>${org.hibernate-hibernate-core-jakarta-version8}</version>
 			</dependency>
 
 			<!-- 1.8
@@ -498,23 +430,23 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-c3p0</artifactId>
-				<version>${org.hibernate-hibernate-c3p0-version}</version>
+				<version>${org.hibernate-hibernate-c3p0-version8}</version>
 			</dependency>
 
-			<!-- 17+
+			<!-- 11+
 			https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
 			<dependency>
 				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-core</artifactId>
-				<version>${org.hibernate.orm-hibernate-core-version}</version>
+				<version>${org.hibernate.orm-hibernate-core-version11}</version>
 			</dependency>
 
-			<!-- 17+
+			<!-- 11+
 			https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-c3p0 -->
 			<dependency>
 				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-c3p0</artifactId>
-				<version>${org.hibernate.orm-hibernate-c3p0-version}</version>
+				<version>${org.hibernate.orm-hibernate-c3p0-version11}</version>
 			</dependency>
 
 			<!--

@@ -14,7 +14,7 @@
 
 	<profiles>
 		<profile>
-			<id>Java-1.8</id>
+			<id>Java-8</id>
 			<dependencies>
 				<!--
 				https://mvnrepository.com/artifact/org.hibernate/hibernate-core-jakarta -->
@@ -29,18 +29,11 @@
 					<artifactId>hibernate-c3p0</artifactId>
 				</dependency>
 
-	       		<!--
-	       		https://mvnrepository.com/artifact/org.hibernate.common/hibernate-commons-annotations -->
-	       		<dependency>
-	       			<groupId>org.hibernate.common</groupId>
-	       			<artifactId>hibernate-commons-annotations</artifactId>
-	       		</dependency>
-
 			</dependencies>
 		</profile>
 		
 		<profile>
-			<id>Java-11</id>
+			<id>Java-11+</id>
 			<dependencies>
 				<!--
 				https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
@@ -55,7 +48,6 @@
 					<groupId>org.hibernate.orm</groupId>
 					<artifactId>hibernate-c3p0</artifactId>
 				</dependency>
-
 
 			</dependencies>
 		</profile>
