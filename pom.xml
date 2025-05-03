@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<revision>1.${java.target.version}.0-SNAPSHOT</revision>
+		<revision>1.${java.target.version}.1-SNAPSHOT</revision>
 		<bsdependencies.version>${revision}</bsdependencies.version>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
