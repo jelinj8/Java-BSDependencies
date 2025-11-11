@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<properties>
-		<java.target.version>17</java.target.version>
-		<revision>1.17.1-SNAPSHOT</revision>
+		<java.target.version>21</java.target.version>
+		<revision>1.21.1-SNAPSHOT</revision>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
         <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
@@ -26,9 +26,9 @@
         
         <org.hibernate.common-hibernate-commons-annotations-version>7.0.3.Final</org.hibernate.common-hibernate-commons-annotations-version>
         <com.mysql-mysql-connector-j-version>9.1.0</com.mysql-mysql-connector-j-version>
-        <org.xhtmlrenderer-flying-saucer-core-version>9.13.3</org.xhtmlrenderer-flying-saucer-core-version>
-        <org.xhtmlrenderer-flying-saucer-pdf-version>9.13.3</org.xhtmlrenderer-flying-saucer-pdf-version>
-        <org.xhtmlrenderer-flying-saucer-log4j-version>9.13.3</org.xhtmlrenderer-flying-saucer-log4j-version>
+        <org.xhtmlrenderer-flying-saucer-core-version>10.0.3</org.xhtmlrenderer-flying-saucer-core-version>
+        <org.xhtmlrenderer-flying-saucer-pdf-version>10.0.3</org.xhtmlrenderer-flying-saucer-pdf-version>
+        <org.xhtmlrenderer-flying-saucer-log4j-version>10.0.3</org.xhtmlrenderer-flying-saucer-log4j-version>
 		<!-- do not reorder/reformat -->
 		
 	</properties>
