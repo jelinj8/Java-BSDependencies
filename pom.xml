@@ -7,12 +7,13 @@
 		<revision>1.17.1-SNAPSHOT</revision>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
-        <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
-        <jakarta.xml.bind-jakarta.xml.ws-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.ws-api-version>
-        <org.glassfish.jaxb-jaxb-runtime-version>3.0.2</org.glassfish.jaxb-jaxb-runtime-version>
+        <jakarta.xml.bind-jakarta.xml.bind-api-version>4.0.4</jakarta.xml.bind-jakarta.xml.bind-api-version>
+        <jakarta.xml.bind-jakarta.xml.ws-api-version>4.0.2</jakarta.xml.bind-jakarta.xml.ws-api-version>
+        <org.glassfish.jaxb-jaxb-runtime-version>4.0.6</org.glassfish.jaxb-jaxb-runtime-version>
         <org.glassfish.metro-webservices-rt-version>4.0.4</org.glassfish.metro-webservices-rt-version>
         <jakarta.servlet-jakarta.servlet-api-version>6.1.0</jakarta.servlet-jakarta.servlet-api-version>
         <jakarta.annotation-jakarta.annotation-api-version>3.0.0</jakarta.annotation-jakarta.annotation-api-version>
+
         
         <junit-junit-version8>XX</junit-junit-version8>
         <org.junit.jupiter-junit-jupiter-api-version11>5.12.2</org.junit.jupiter-junit-jupiter-api-version11>
