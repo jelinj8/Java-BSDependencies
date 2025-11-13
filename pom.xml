@@ -13,7 +13,6 @@
         <org.glassfish.metro-webservices-rt-version>4.0.4</org.glassfish.metro-webservices-rt-version>
         <jakarta.servlet-jakarta.servlet-api-version>6.1.0</jakarta.servlet-jakarta.servlet-api-version>
         <jakarta.annotation-jakarta.annotation-api-version>3.0.0</jakarta.annotation-jakarta.annotation-api-version>
-
         
         <junit-junit-version8>XX</junit-junit-version8>
         <org.junit.jupiter-junit-jupiter-api-version11>5.12.2</org.junit.jupiter-junit-jupiter-api-version11>
