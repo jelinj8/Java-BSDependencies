@@ -18,7 +18,7 @@
         <org.junit.jupiter-junit-jupiter-api-version11>6.0.1</org.junit.jupiter-junit-jupiter-api-version11>
         
         <com.oracle.database.jdbc-ojdbc8-version8>XX</com.oracle.database.jdbc-ojdbc8-version8>
-        <com.oracle.database.jdbc-ojdbc11-version11>23.26.0.0.0</com.oracle.database.jdbc-ojdbc11-version11>
+        <com.oracle.database.jdbc-ojdbc11-version11>21.20.0.0</com.oracle.database.jdbc-ojdbc11-version11>
         
         <org.hibernate-hibernate-core-jakarta-version8>XX</org.hibernate-hibernate-core-jakarta-version8>
         <org.hibernate-hibernate-c3p0-version8>XX</org.hibernate-hibernate-c3p0-version8>
