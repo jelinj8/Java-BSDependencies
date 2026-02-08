@@ -30,6 +30,9 @@
         <org.xhtmlrenderer-flying-saucer-core-version>9.13.3</org.xhtmlrenderer-flying-saucer-core-version>
         <org.xhtmlrenderer-flying-saucer-pdf-version>9.13.3</org.xhtmlrenderer-flying-saucer-pdf-version>
         <org.xhtmlrenderer-flying-saucer-log4j-version>9.13.3</org.xhtmlrenderer-flying-saucer-log4j-version>
+		
+		<org.junit.jupiter-junit-jupiter>5.14.2</org.junit.jupiter-junit-jupiter>
+		<org.apache.maven.plugins-maven-surefire-plugin>3.5.4</org.apache.maven.plugins-maven-surefire-plugin>
 		<!-- do not reorder/reformat -->
 		
 	</properties>
@@ -69,6 +72,7 @@
 		<module>ojdbc</module>
 		<module>httpclient</module>
 		<module>slf4j</module>
+		<module>junit</module>
 	</modules>
 
 	<dependencyManagement>
@@ -535,10 +539,25 @@
 				<version>0.10.2</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter</artifactId>
+				<version>${org.junit.jupiter-junit-jupiter}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<build>
 		<plugins>
+			<pluginManagement>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>${org.apache.maven.plugins-maven-surefire-plugin}</version>
+					</plugin>
+				</plugins>
+			</pluginManagement>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
