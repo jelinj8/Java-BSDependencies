@@ -14,9 +14,6 @@
         <jakarta.servlet-jakarta.servlet-api-version>XX</jakarta.servlet-jakarta.servlet-api-version>
         <jakarta.annotation-jakarta.annotation-api-version>XX</jakarta.annotation-jakarta.annotation-api-version>
         
-        <junit-junit-version8>XX</junit-junit-version8>
-        <org.junit.jupiter-junit-jupiter-api-version11>XX</org.junit.jupiter-junit-jupiter-api-version11>
-        
         <com.oracle.database.jdbc-ojdbc8-version8>XX</com.oracle.database.jdbc-ojdbc8-version8>
         <com.oracle.database.jdbc-ojdbc11-version11>XX</com.oracle.database.jdbc-ojdbc11-version11>
         
@@ -359,24 +356,6 @@
 				<version>${jakarta.annotation-jakarta.annotation-api-version}</version>
 			</dependency>
 
-			<!-- 1.8 
-			https://mvnrepository.com/artifact/junit/junit -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit-junit-version8}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<!-- 11+
-			https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-			<dependency>
-				<groupId>org.junit.jupiter</groupId>
-				<artifactId>junit-jupiter-api</artifactId>
-				<version>${org.junit.jupiter-junit-jupiter-api-version11}</version>
-				<scope>test</scope>
-			</dependency>
-
 			<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
@@ -543,6 +522,25 @@
 				<groupId>org.reflections</groupId>
 				<artifactId>reflections</artifactId>
 				<version>0.10.2</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${org.junit.jupiter-junit-jupiter}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${org.junit.jupiter-junit-jupiter}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-params</artifactId>
+				<version>${org.junit.jupiter-junit-jupiter}</version>
 			</dependency>
 
 			<dependency>
