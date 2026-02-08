@@ -31,7 +31,7 @@
         <org.xhtmlrenderer-flying-saucer-pdf-version>10.0.3</org.xhtmlrenderer-flying-saucer-pdf-version>
         <org.xhtmlrenderer-flying-saucer-log4j-version>10.0.3</org.xhtmlrenderer-flying-saucer-log4j-version>
 		
-		<org.junit.jupiter-junit-jupiter>5.14.2</org.junit.jupiter-junit-jupiter>
+		<org.junit.jupiter-junit-jupiter>6.0.2</org.junit.jupiter-junit-jupiter>
 		<org.apache.maven.plugins-maven-surefire-plugin>3.5.4</org.apache.maven.plugins-maven-surefire-plugin>
 		<!-- do not reorder/reformat -->
 		
