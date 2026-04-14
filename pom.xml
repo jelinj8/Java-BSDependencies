@@ -24,9 +24,9 @@
         
         <org.hibernate.common-hibernate-commons-annotations-version>7.0.3.Final</org.hibernate.common-hibernate-commons-annotations-version>
         <com.mysql-mysql-connector-j-version>9.5.0</com.mysql-mysql-connector-j-version>
-        <org.xhtmlrenderer-flying-saucer-core-version>10.0.3</org.xhtmlrenderer-flying-saucer-core-version>
-        <org.xhtmlrenderer-flying-saucer-pdf-version>10.0.3</org.xhtmlrenderer-flying-saucer-pdf-version>
-        <org.xhtmlrenderer-flying-saucer-log4j-version>10.0.3</org.xhtmlrenderer-flying-saucer-log4j-version>
+        <org.xhtmlrenderer-flying-saucer-core-version>10.2.0</org.xhtmlrenderer-flying-saucer-core-version>
+        <org.xhtmlrenderer-flying-saucer-pdf-version>10.2.0</org.xhtmlrenderer-flying-saucer-pdf-version>
+        <org.xhtmlrenderer-flying-saucer-log4j-version>10.2.0</org.xhtmlrenderer-flying-saucer-log4j-version>
 		
 		<org.junit.jupiter-junit-jupiter>6.0.2</org.junit.jupiter-junit-jupiter>
 		<org.apache.maven.plugins-maven-surefire-plugin>3.5.4</org.apache.maven.plugins-maven-surefire-plugin>
