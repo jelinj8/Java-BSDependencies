@@ -4,7 +4,7 @@
 
 	<properties>
 		<java.target.version>8</java.target.version>
-		<revision>1.8.1</revision>
+		<revision>1.8.2-SNAPSHOT</revision>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
         <jakarta.xml.bind-jakarta.xml.bind-api-version>3.0.1</jakarta.xml.bind-jakarta.xml.bind-api-version>
