@@ -4,7 +4,7 @@
 
 	<properties>
 		<java.target.version>17</java.target.version>
-		<revision>1.17.1-SNAPSHOT</revision>
+		<revision>1.17.1</revision>
 
 		<!-- do not reorder/reformat, JDK version spefic dependency versions -->
         <jakarta.xml.bind-jakarta.xml.bind-api-version>4.0.5</jakarta.xml.bind-jakarta.xml.bind-api-version>
