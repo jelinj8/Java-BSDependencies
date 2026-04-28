@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-slf4j</artifactId>
+	<name>Dependency Management SLF4J</name>
 	<packaging>pom</packaging>
 
 	<dependencies>

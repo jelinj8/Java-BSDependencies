@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-junit</artifactId>
+	<name>Dependency Management JUnit</name>
 	<packaging>pom</packaging>
 
 	<dependencies>
