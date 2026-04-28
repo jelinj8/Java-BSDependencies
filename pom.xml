@@ -39,20 +39,32 @@
 	<artifactId>dependency-management</artifactId>
 	<version>${revision}</version>
 	<name>BSDependecies root POM</name>
+	<description>Dependency management BOMs for Bliksoft Java projects</description>
+	<url>https://github.com/jelinj8/Java-BSDependencies</url>
 	<packaging>pom</packaging>
 
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, version 2.1</name>
+			<url>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-	<distributionManagement>
-		<repository>
-			<id>bliksoft-private</id>
-			<url>https://mvn.bliksoft.cz/private</url>
-		</repository>
-		<snapshotRepository>
-			<id>bliksoft-private-snapshots</id>
-			<url>https://mvn.bliksoft.cz/private-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-        
+	<developers>
+		<developer>
+			<name>Jakub Jelínek</name>
+			<email>jakub.jelinek@gmail.com</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:https://github.com/jelinj8/Java-BSDependencies.git</connection>
+		<developerConnection>scm:git:https://github.com/jelinj8/Java-BSDependencies.git</developerConnection>
+		<url>https://github.com/jelinj8/Java-BSDependencies</url>
+		<tag>HEAD</tag>
+	</scm>
+
 	<modules>
 		<module>client</module>
 		<module>freemarker</module>
