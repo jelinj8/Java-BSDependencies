@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-httpclient</artifactId>
+	<name>Dependency Management HTTP Client</name>
 	<packaging>pom</packaging>
 
 	<dependencies>

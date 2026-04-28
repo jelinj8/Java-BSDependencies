@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-flyingsaucer</artifactId>
+	<name>Dependency Management Flying Saucer</name>
 	<packaging>pom</packaging>
 
 	<dependencies>

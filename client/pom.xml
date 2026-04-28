@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-client</artifactId>
+	<name>Dependency Management Client</name>
 	<packaging>pom</packaging>
 
 	<dependencies>
