@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-mariadb</artifactId>
+	<name>Dependency Management MariaDB</name>
 	<packaging>pom</packaging>
 
 	<dependencies>

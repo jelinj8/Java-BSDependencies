@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-mysql</artifactId>
+	<name>Dependency Management MySQL</name>
 	<packaging>pom</packaging>
 
 	<dependencies>
