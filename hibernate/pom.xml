@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-hibernate</artifactId>
+	<name>Dependency Management Hibernate</name>
 	<packaging>pom</packaging>
 
 	<dependencies>

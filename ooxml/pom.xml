@@ -10,6 +10,7 @@
 	</parent>
 
 	<artifactId>dependency-management-ooxml</artifactId>
+	<name>Dependency Management OOXML</name>
 	<packaging>pom</packaging>
 
 	<dependencies>
