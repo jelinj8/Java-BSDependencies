@@ -116,19 +116,20 @@ jobs:
       - name: Determine parent coordinates
         working-directory: src
         run: |
+          echo "GROUP_ID=$(mvn -B -q help:evaluate -Dexpression=project.groupId -DforceStdout)" >> "$GITHUB_ENV"
           echo "ARTIFACT_ID=$(mvn -B -q help:evaluate -Dexpression=project.artifactId -DforceStdout)" >> "$GITHUB_ENV"
 
       - name: Link packages to this repo (best-effort, cosmetic only)
         run: |
           # Links the parent BOM's package (dependency-management) and every submodule package
           # (dependency-management-*) to this repo - purely a Packages-tab display nicety,
-          # doesn't affect consumption of any of them. Matches on exact name / "<name>-" prefix
-          # rather than a plain substring - with 16+ similarly-named packages in the registry, a
-          # bare `contains($a)` matches all of them and just links whichever the API happens to
-          # list first.
+          # doesn't affect consumption of any of them. The registry's package "name" is the full
+          # "groupId:artifactId" coordinate (e.g. "cz.bliksoft.java:dependency-management-junit"),
+          # not the bare artifactId, so the match has to include the groupId too.
           OWNER=$(echo "${{ github.repository }}" | cut -d/ -f1)
           REPO_NAME=$(echo "${{ github.repository }}" | cut -d/ -f2)
-          echo "listing maven packages for owner=$OWNER, matching artifactId=$ARTIFACT_ID"
+          COORD="$GROUP_ID:$ARTIFACT_ID"
+          echo "listing maven packages for owner=$OWNER, matching coordinate=$COORD"
           LIST_RESPONSE=$(curl -s -w '\n%{http_code}' -u "bot:${{ secrets.ORG_PACKAGES_TOKEN }}" \
             "https://${{ vars.REGISTRY_URL }}/api/v1/packages/$OWNER?type=maven&limit=50")
           LIST_STATUS=$(echo "$LIST_RESPONSE" | tail -n1)
@@ -139,10 +140,9 @@ jobs:
             echo "$LIST_BODY"
             exit 0
           fi
-          echo "$LIST_BODY" | jq -r '"found package: " + .name' 2>/dev/null || echo "response body was not valid JSON: $LIST_BODY"
-          PKG_NAMES=$(echo "$LIST_BODY" | jq -r --arg a "$ARTIFACT_ID" '.[] | select(.name == $a or (.name | startswith($a + "-"))) | .name' | sort -u)
+          PKG_NAMES=$(echo "$LIST_BODY" | jq -r --arg a "$COORD" '.[] | select(.name == $a or (.name | startswith($a + "-"))) | .name' | sort -u)
           if [ -z "$PKG_NAMES" ]; then
-            echo "no packages in the list matched artifactId=$ARTIFACT_ID - nothing to link"
+            echo "no packages in the list matched coordinate=$COORD - nothing to link"
             exit 0
           fi
           for PKG_NAME in $PKG_NAMES; do
