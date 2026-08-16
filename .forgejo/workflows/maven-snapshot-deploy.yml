@@ -17,11 +17,25 @@
 # This file lives on GitHub (the real source of truth, which Forgejo pull-mirrors) rather than
 # being pushed directly to the Forgejo side - a commit made only on the Forgejo side of a pull
 # mirror would very likely be silently discarded on the next sync from GitHub.
+#
+# Only the modules that actually changed (plus the root parent BOM) are deployed on a normal
+# push - see the "Determine modules to deploy" step. maven-deploy-plugin's deployAtEnd defaults
+# to true, which batches every reactor artifact's upload into one shot fired at the very end of
+# the build; that's suspected to be why, before this fix, only the LAST-built module
+# (dependency-management-junit, last under root <modules>) ever actually showed up in the
+# registry despite the job reporting success - deploying per-module instead (-DdeployAtEnd=false)
+# avoids that batch entirely. Trigger a manual run with force_all=true (the default) to back-fill
+# every module's package after this change first lands, or whenever a full redeploy is needed.
 
 on:
   push:
     branches: [java-8, java-11, java-17, java-21]
   workflow_dispatch:
+    inputs:
+      force_all:
+        description: "Deploy every module regardless of what changed (use to back-fill the registry)"
+        type: boolean
+        default: true
 
 jobs:
   snapshot-deploy:
@@ -34,7 +48,7 @@ jobs:
     steps:
       - name: Clone repository
         run: |
-          git clone --depth 1 --branch "${{ github.ref_name }}" \
+          git clone --branch "${{ github.ref_name }}" \
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@${{ vars.REGISTRY_URL }}/${{ github.repository }}.git" src
 
       - name: Write Maven settings.xml
@@ -51,14 +65,50 @@ jobs:
           </settings>
           SETTINGSEOF
 
+      - name: Determine modules to deploy
+        working-directory: src
+        env:
+          FORCE_ALL: ${{ github.event.inputs.force_all }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          MODULES="client freemarker flyingsaucer jaxb hibernate mariadb mysql log4j mail ooxml service servicedef ojdbc httpclient slf4j junit"
+          PL_ARG=""
+
+          if [ "$FORCE_ALL" = "true" ]; then
+            echo "force_all requested - deploying every module"
+          elif [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+            echo "no previous commit to diff against (first push on this branch) - deploying every module"
+          else
+            DIFF=$(git diff --name-only "$BEFORE_SHA" "$AFTER_SHA")
+            if echo "$DIFF" | grep -qx 'pom.xml'; then
+              echo "root pom.xml changed - deploying every module"
+            else
+              CHANGED=""
+              for m in $MODULES; do
+                if echo "$DIFF" | grep -q "^$m/"; then
+                  CHANGED="$CHANGED,$m"
+                fi
+              done
+              if [ -z "$CHANGED" ]; then
+                echo "no module directories changed - nothing to deploy"
+                PL_ARG="-pl ."
+              else
+                PL_ARG="-pl .$CHANGED"
+              fi
+            fi
+          fi
+
+          echo "PL_ARG=$PL_ARG" >> "$GITHUB_ENV"
+
       - name: Build (verify) the whole reactor
         working-directory: src
         run: mvn -B -U verify
 
-      - name: Deploy the whole reactor
+      - name: Deploy the reactor
         working-directory: src
         run: |
-          mvn -B -U -s ../settings.xml deploy -DskipTests \
+          mvn -B -U -s ../settings.xml deploy -DskipTests -DdeployAtEnd=false $PL_ARG \
             -DaltDeploymentRepository=forgejo-deploy::default::https://${{ vars.REGISTRY_URL }}/api/packages/${{ github.repository_owner }}/maven
         env:
           MVN_TOKEN: ${{ secrets.ORG_PACKAGES_TOKEN }}
