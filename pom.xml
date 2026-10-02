@@ -29,7 +29,7 @@
         <org.xhtmlrenderer-flying-saucer-log4j-version>9.4.1</org.xhtmlrenderer-flying-saucer-log4j-version>
 		
 		<org.junit.jupiter-junit-jupiter>5.14.4</org.junit.jupiter-junit-jupiter>
-		<org.apache.maven.plugins-maven-surefire-plugin>3.5.6</org.apache.maven.plugins-maven-surefire-plugin>
+		<org.apache.maven.plugins-maven-surefire-plugin>3.6.0</org.apache.maven.plugins-maven-surefire-plugin>
 		<!-- do not reorder/reformat -->
 		
 	</properties>
