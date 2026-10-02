@@ -187,7 +187,7 @@
 			<dependency>
 				<groupId>org.freemarker</groupId>
 				<artifactId>freemarker</artifactId>
-				<version>2.3.34</version>
+				<version>2.3.35</version>
 			</dependency>
 
 			<!--
@@ -225,7 +225,7 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
-				<version>3.20.0</version>
+				<version>3.21.0</version>
 			</dependency>
 
 			<!--
@@ -233,7 +233,7 @@
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-collections4</artifactId>
-				<version>4.5.0</version>
+				<version>4.6.0</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
@@ -297,7 +297,7 @@
 			<dependency>
 				<groupId>org.apache.httpcomponents.client5</groupId>
 				<artifactId>httpclient5</artifactId>
-				<version>5.6.2</version>
+				<version>5.6.4</version>
 			</dependency>
 
 			<dependency>
@@ -402,28 +402,28 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-nop</artifactId>
-				<version>2.0.18</version>
+				<version>2.0.20</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-reload4j -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-reload4j</artifactId>
-				<version>2.0.18</version>
+				<version>2.0.20</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
-				<version>2.0.18</version>
+				<version>2.0.20</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-simple</artifactId>
-				<version>2.0.18</version>
+				<version>2.0.20</version>
 			</dependency>
 
 			<!--
@@ -585,7 +585,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>flatten-maven-plugin</artifactId>
-				<version>1.7.3</version>
+				<version>1.8.0</version>
 				<configuration>
 					<updatePomFile>true</updatePomFile>
 					<flattenMode>resolveCiFriendliesOnly</flattenMode>
