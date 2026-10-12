@@ -300,6 +300,13 @@
 				<version>3.5.4</version>
 			</dependency>
 
+			<!-- https://github.com/weisJ/jsvg - SVG rendering (Java 8 bytecode) -->
+			<dependency>
+				<groupId>com.github.weisj</groupId>
+				<artifactId>jsvg</artifactId>
+				<version>2.1.0</version>
+			</dependency>
+
 			<!-- https://openjfx.io - JDK-specific (see org.openjfx-javafx-version*); classifier
 			     (platform) variants resolve to the same version -->
 			<dependency>
