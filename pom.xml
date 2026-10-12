@@ -30,6 +30,12 @@
 		
 		<org.junit.jupiter-junit-jupiter>XX</org.junit.jupiter-junit-jupiter>
 		<org.apache.maven.plugins-maven-surefire-plugin>XX</org.apache.maven.plugins-maven-surefire-plugin>
+		<!-- JavaFX lines by minimum JDK (17.0.x: JDK 11+, 21.0.x: JDK 17+, 25.x: JDK 23+);
+		     the selector points at the line of the branch -->
+		<org.openjfx-javafx-version11>XX</org.openjfx-javafx-version11>
+		<org.openjfx-javafx-version17>XX</org.openjfx-javafx-version17>
+		<org.openjfx-javafx-version23>XX</org.openjfx-javafx-version23>
+		<org.openjfx-javafx-version>XX</org.openjfx-javafx-version>
 		<!-- do not reorder/reformat -->
 		
 	</properties>
@@ -82,6 +88,7 @@
 		<module>httpclient</module>
 		<module>slf4j</module>
 		<module>junit</module>
+		<module>webcam</module>
 	</modules>
 
 	<dependencyManagement>
@@ -182,6 +189,12 @@
 				<version>${revision}</version>
 				<type>pom</type>
 			</dependency>
+			<dependency>
+				<groupId>cz.bliksoft.java</groupId>
+				<artifactId>dependency-management-webcam</artifactId>
+				<version>${revision}</version>
+				<type>pom</type>
+			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 			<dependency>
@@ -247,7 +260,7 @@
 			<dependency>
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
-				<version>1.22.1</version>
+				<version>1.23.0</version>
 			</dependency>
 
 			<!--
@@ -285,6 +298,172 @@
 				<groupId>com.google.zxing</groupId>
 				<artifactId>core</artifactId>
 				<version>3.5.4</version>
+			</dependency>
+
+			<!-- https://openjfx.io - JDK-specific (see org.openjfx-javafx-version*); classifier
+			     (platform) variants resolve to the same version -->
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-base</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-graphics</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-fxml</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-swing</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-web</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-media</artifactId>
+				<version>${org.openjfx-javafx-version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.github.sarxos/webcam-capture -->
+			<dependency>
+				<groupId>com.github.sarxos</groupId>
+				<artifactId>webcam-capture</artifactId>
+				<version>0.3.12</version>
+			</dependency>
+
+			<!-- https://github.com/bytedeco/javacpp-presets/tree/master/opencv - OpenCV with its
+			     OpenBLAS and JavaCPP; the classifier variants are the natives per platform
+			     (dependency-management-webcam picks them), opencv-platform pulls all of them -->
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv-platform</artifactId>
+				<version>4.14.0-1.5.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+				<classifier>windows-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+				<classifier>linux-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+				<classifier>linux-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+				<classifier>macosx-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>opencv</artifactId>
+				<version>4.14.0-1.5.14</version>
+				<classifier>macosx-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+				<classifier>windows-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+				<classifier>linux-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+				<classifier>linux-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+				<classifier>macosx-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>openblas</artifactId>
+				<version>0.3.34-1.5.14</version>
+				<classifier>macosx-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+				<classifier>windows-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+				<classifier>linux-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+				<classifier>linux-arm64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+				<classifier>macosx-x86_64</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.bytedeco</groupId>
+				<artifactId>javacpp</artifactId>
+				<version>1.5.14</version>
+				<classifier>macosx-arm64</classifier>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.jmdns/jmdns -->
+			<dependency>
+				<groupId>org.jmdns</groupId>
+				<artifactId>jmdns</artifactId>
+				<version>3.6.4</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.core5/httpcore5 -->
