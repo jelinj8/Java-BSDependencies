@@ -28,12 +28,16 @@ Each branch targets a specific JDK version and produces its own artifact version
 | `java-11` | `1.11.x-SNAPSHOT` |
 | `java-17` | `1.17.x-SNAPSHOT` |
 | `java-21` | `1.21.x-SNAPSHOT` |
+| `java-25` | `1.25.x-SNAPSHOT` |
+
+The `Y` of `1.XX.Y` is kept the same on all version branches (releases bump it everywhere), so an
+application switches to another JDK line by changing only `XX` of the BOM version.
 
 All changes must be propagated from `master` to the relevant version branches to ease merging. JDK-version-specific dependency version properties use a `-versionX` suffix (e.g., `-version8`, `-version11`).
 
 ## Module Overview
 
-Sub-modules (`client`, `service`, `servicedef`, `jaxb`, `hibernate`, `log4j`, `slf4j`, `mysql`, `mariadb`, `ojdbc`, `httpclient`, `flyingsaucer`, `ooxml`, `freemarker`, `mail`, `junit`) are POM-only artifacts that group dependencies by concern. They contain no version declarations of their own — all versions are defined in the **root `pom.xml`**.
+Sub-modules (`client`, `service`, `servicedef`, `jaxb`, `hibernate`, `log4j`, `slf4j`, `mysql`, `mariadb`, `ojdbc`, `httpclient`, `flyingsaucer`, `ooxml`, `freemarker`, `mail`, `junit`, `webcam`) are POM-only artifacts that group dependencies by concern. They contain no version declarations of their own — all versions are defined in the **root `pom.xml`**.
 
 ## Version Properties
 
@@ -42,6 +46,10 @@ All dependency versions live in the `<properties>` block of the root `pom.xml`. 
 **Non-JDK-specific** — hardcoded inline in `<dependencyManagement>` (e.g. log4j, commons-*, httpclient5). Updated on `master` and merged to all version branches.
 
 **JDK-specific** — declared as properties with a `-versionX` suffix (e.g. `-version8`, `-version11`). A value of `XX` means the dependency is not relevant for that branch (either unused or must be set in the appropriate branch). Updated directly on the target branch, never via master.
+
+The suffix is the **minimum JDK of the version line** the property holds, so an older branch is never bumped to an incompatible line. When one artifact has several such lines (JavaFX: `org.openjfx-javafx-version11` = 17.0.x, `-version17` = 21.0.x, `-version23` = 25.x), `<dependencyManagement>` uses a selector property (`org.openjfx-javafx-version`) that each branch points at its line (`${org.openjfx-javafx-version17}`). New JDK-specific properties go inside the `do not reorder/reformat` block; the master → branch merge then conflicts on the neighbouring branch values - keep the branch values.
+
+**`webcam` module** — `dependency-management-webcam` brings webcam-capture and OpenCV (bytedeco, with OpenBLAS and JavaCPP) including the natives of the build machine via OS-activated profiles (`-Djavacpp.platform=<platform>` selects another one; profiles of a dependency POM see system properties, not the consumer's POM properties). Per-platform packaging copies the classifier variants managed in the root POM.
 
 ## Making Changes
 
