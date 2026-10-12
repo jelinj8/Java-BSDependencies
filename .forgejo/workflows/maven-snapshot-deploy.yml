@@ -1,14 +1,15 @@
 # Publishes a Maven snapshot to Forgejo's own package registry on every push. Adapted from
 # SYS/devenv's samples/maven-snapshot-deploy.yml for this repo specifically:
 #
-# This is a multi-module BOM project (packaging=pom, parent + 16 submodules under <modules>, no
-# real Java source) with FOUR independently-versioned branches instead of one mainline
+# This is a multi-module BOM project (packaging=pom, parent + 17 submodules under <modules>, no
+# real Java source) with FIVE independently-versioned branches instead of one mainline
 # (java-8 -> 1.8.x-SNAPSHOT, java-11 -> 1.11.x-SNAPSHOT, java-17 -> 1.17.x-SNAPSHOT,
-# java-21 -> 1.21.x-SNAPSHOT - each branch's own pom.xml already encodes its JDK target in the
-# version, so there's no collision risk between them). `master` is excluded from the trigger list
+# java-21 -> 1.21.x-SNAPSHOT, java-25 -> 1.25.x-SNAPSHOT - each branch's own pom.xml already
+# encodes its JDK target in the version, so there's no collision risk between them). A new JDK
+# branch has to be added to the push trigger below, and a new module to MODULES. `master` is excluded from the trigger list
 # below - its pom has a literal placeholder revision ("1.XX.1-SNAPSHOT"), it doesn't look like a
 # buildable branch. A plain `mvn deploy` from the root (no -N) builds/deploys the whole reactor -
-# parent + all 16 modules - in one run, which is what's wanted here.
+# parent + all 17 modules - in one run, which is what's wanted here.
 #
 # No EXTRA_MAVEN_OWNERS needed - the cz.bliksoft.java groupIds in this pom are all inside
 # <dependencyManagement> (declared managed versions for consumers), not actual <dependencies> of
@@ -29,7 +30,7 @@
 
 on:
   push:
-    branches: [java-8, java-11, java-17, java-21]
+    branches: [java-8, java-11, java-17, java-21, java-25]
   workflow_dispatch:
     inputs:
       force_all:
@@ -72,7 +73,7 @@ jobs:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
         run: |
-          MODULES="client freemarker flyingsaucer jaxb hibernate mariadb mysql log4j mail ooxml service servicedef ojdbc httpclient slf4j junit"
+          MODULES="client freemarker flyingsaucer jaxb hibernate mariadb mysql log4j mail ooxml service servicedef ojdbc httpclient slf4j junit webcam"
           PL_ARG=""
 
           if [ "$FORCE_ALL" = "true" ]; then
