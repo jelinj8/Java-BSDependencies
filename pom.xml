@@ -15,12 +15,12 @@
         <jakarta.annotation-jakarta.annotation-api-version>3.0.0</jakarta.annotation-jakarta.annotation-api-version>
         
         <com.oracle.database.jdbc-ojdbc8-version8>XX</com.oracle.database.jdbc-ojdbc8-version8>
-        <com.oracle.database.jdbc-ojdbc11-version11>21.20.0.0</com.oracle.database.jdbc-ojdbc11-version11>
+        <com.oracle.database.jdbc-ojdbc11-version11>21.23.0.0</com.oracle.database.jdbc-ojdbc11-version11>
         
         <org.hibernate-hibernate-core-jakarta-version8>XX</org.hibernate-hibernate-core-jakarta-version8>
         <org.hibernate-hibernate-c3p0-version8>XX</org.hibernate-hibernate-c3p0-version8>
-        <org.hibernate.orm-hibernate-core-version11>6.6.58.Final</org.hibernate.orm-hibernate-core-version11>
-        <org.hibernate.orm-hibernate-c3p0-version11>6.6.58.Final</org.hibernate.orm-hibernate-c3p0-version11>
+        <org.hibernate.orm-hibernate-core-version11>7.4.13.Final</org.hibernate.orm-hibernate-core-version11>
+        <org.hibernate.orm-hibernate-c3p0-version11>7.4.13.Final</org.hibernate.orm-hibernate-c3p0-version11>
         
         <org.hibernate.common-hibernate-commons-annotations-version>7.0.3.Final</org.hibernate.common-hibernate-commons-annotations-version>
         <com.mysql-mysql-connector-j-version>9.7.0</com.mysql-mysql-connector-j-version>
@@ -33,9 +33,9 @@
 		<!-- JavaFX lines by minimum JDK (17.0.x: JDK 11+, 21.0.x: JDK 17+, 25.x: JDK 23+);
 		     the selector points at the line of the branch -->
 		<org.openjfx-javafx-version11>XX</org.openjfx-javafx-version11>
-		<org.openjfx-javafx-version17>XX</org.openjfx-javafx-version17>
+		<org.openjfx-javafx-version17>21.0.12</org.openjfx-javafx-version17>
 		<org.openjfx-javafx-version23>XX</org.openjfx-javafx-version23>
-		<org.openjfx-javafx-version>XX</org.openjfx-javafx-version>
+		<org.openjfx-javafx-version>${org.openjfx-javafx-version17}</org.openjfx-javafx-version>
 		<!-- do not reorder/reformat -->
 		
 	</properties>
